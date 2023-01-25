@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>SpaceX Info Site - Home</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="home/home.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="main.js" defer></script>
+        <script src="utils.js" defer></script>
+        <script src="home/companyInfoSection.js" defer></script>
+        <script src="home/nextLaunchMap.js" defer></script>
+        <script src="home/initalize.js" defer></script>
+    </head>
+
+    <body>
+      <div id="header">
+        <h1>SpaceX Info</h1>
+      </div>
+      <div id="menu">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="launches.html">Launches</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="crew.html">Crew</a>
+          </li>
+      </ul>
+      <button onclick="topFunction()" class="toTheTop" title="Go to top"></button>
+      </div>
+      <div id="content">
+        <div id="companyInfoSection">
+          <h2></h2>
+          <p></p>
+          <h5>General stats:</h5>
+          <table>
+            <tr>
+              <td class="stat-name">employees</td>
+              <td class="stat-employees"></td>
+            </tr>
+            <tr>
+              <td class="stat-name">launch sites</td>
+              <td class="stat-launch_sites"></td>
+            </tr>
+            <tr>
+              <td class="stat-name">valuation</td>
+              <td class="stat-valuation"></td>
+            </tr>
+          </table>
+          <h5>Next launch:</h5>
+        </div>
+        <div id="homeMap"></div>
+      </div>
+    </body>
+</html>
